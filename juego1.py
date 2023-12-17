@@ -37,7 +37,7 @@ def jugarAhorcado():
                
         else:
             intentosRestantes-=1
-            print(f"Letra incorrecta. Te quedan {intentosRestantes}")
+            print(f"Letra incorrecta. Te quedan {intentosRestantes} intentos")
         if intentosRestantes==0:
             print(f"Has perdido el juego. La palabra secreta era: {palabraSecreta}")
             
