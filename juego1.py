@@ -1,12 +1,12 @@
 import random
 
-#palabra aleatoria
+
 def creacion_de_palabra_aleatoria():
     palabras = ["programacion", "python", "variables", "definir", "bucle"]
     palabraSecreta = random.choice(palabras)
     return palabraSecreta
 
-#mostrar en pantalla las lineas donde estaran ubicadas las letras adivinadas
+
 def mostrar_tablero_lineas(palabraSecreta,letrasAdivinadas):
     lineas = ""
     for letra in palabraSecreta:
@@ -16,8 +16,7 @@ def mostrar_tablero_lineas(palabraSecreta,letrasAdivinadas):
             lineas+="_"
     print(lineas)
                    
-#aqui se juega, ingresando la letra que confome la palabra secreta, segun la letra que sea seleccionada, si corresponde a la palabra secreta
-#una linea se rellenara con la letra digitada y no se contara como intento perdido                 
+
 def jugarAhorcado():
     palabraSecreta=creacion_de_palabra_aleatoria()
     letrasAdivinadas=[]
