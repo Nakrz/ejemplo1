@@ -1,13 +1,13 @@
 import random
 
 
-def creacion_de_palabra_aleatoria():
+def palabraAleatoria():
     palabras = ["programacion", "python", "variables", "definir", "bucle"]
     palabraSecreta = random.choice(palabras)
     return palabraSecreta
 
 
-def mostrar_tablero_lineas(palabraSecreta,letrasAdivinadas):
+def tablero(palabraSecreta,letrasAdivinadas):
     lineas = ""
     for letra in palabraSecreta:
         if letra in letrasAdivinadas:
@@ -18,13 +18,13 @@ def mostrar_tablero_lineas(palabraSecreta,letrasAdivinadas):
                    
 
 def jugarAhorcado():
-    palabraSecreta=creacion_de_palabra_aleatoria()
+    palabraSecreta=palabraAleatoria()
     letrasAdivinadas=[]
     intentosRestantes = 3
     
     
     while intentosRestantes>0:
-        mostrar_tablero_lineas(palabraSecreta,letrasAdivinadas)
+        tablero(palabraSecreta,letrasAdivinadas)
         letra=input("Digite una letra: ").lower()
         
         if letra in palabraSecreta:
